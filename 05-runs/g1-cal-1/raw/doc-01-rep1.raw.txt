@@ -1,0 +1,14 @@
+{
+  "landlord_name": "Camila Duarte",
+  "tenant_name": "Saeed Nasser Al Mazrouei",
+  "unit_number": "C-3412",
+  "community": "Marsa Lantern District",
+  "contract_start_date": "2026-08-20",
+  "contract_end_date": "2027-08-19",
+  "annual_rent_aed": 120000,
+  "security_deposit_aed": null,
+  "number_of_payments": 1,
+  "notice_period_days": 60,
+  "early_termination_penalty_months": 1,
+  "furnished_status": null
+}

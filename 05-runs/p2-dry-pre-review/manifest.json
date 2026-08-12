@@ -1,0 +1,106 @@
+{
+  "batch_id": "p2-dry",
+  "model": "claude-sonnet-5",
+  "cli": {
+    "command": "claude",
+    "version": "2.1.227 (Claude Code)"
+  },
+  "skill": {
+    "path": "03-skill/versions/v0/SKILL.md",
+    "sha256": "57585893fe94b546ceb76f43f204828903e4e0ee285310f699f6b6e99f681174"
+  },
+  "worker": {
+    "path": "00-control/worker.json",
+    "sha256": "7c572c180c0e7de3155ddfcc02501bf15e6630766ef54fb196cee2efb8f7c7fc"
+  },
+  "docs_dir": "01-fixtures/docs/train",
+  "doc_ids": [
+    "doc-01",
+    "doc-02"
+  ],
+  "reps": 1,
+  "sleep_between_seconds": 2.0,
+  "allow_holdout": false,
+  "started_at": "2026-08-11T02:41:25.626Z",
+  "finished_at": "2026-08-11T02:41:46.115Z",
+  "wall_clock_seconds": 20.488945,
+  "resume_count": 0,
+  "invocations": [
+    {
+      "number": 1,
+      "started_at": "2026-08-11T02:41:25.626Z",
+      "finished_at": "2026-08-11T02:41:46.115Z",
+      "wall_clock_seconds": 20.488945,
+      "skipped_existing": 0
+    }
+  ],
+  "runs": [
+    {
+      "doc_id": "doc-01",
+      "rep": 1,
+      "status": "model_failure",
+      "started_at": "2026-08-11T02:41:25.636Z",
+      "finished_at": "2026-08-11T02:41:34.290Z",
+      "wall_clock_seconds": 8.653787,
+      "attempts": 1,
+      "retry_log": [
+        {
+          "attempt": 1,
+          "started_at": "2026-08-11T02:41:25.639Z",
+          "finished_at": "2026-08-11T02:41:34.253Z",
+          "wall_clock_seconds": 8.613578,
+          "status": "success",
+          "returncode": 0,
+          "reason": null,
+          "will_retry": false,
+          "stderr": "",
+          "launch_error": null
+        }
+      ],
+      "resume_skips": 0,
+      "files": {
+        "result_json": "raw/doc-01-rep1.result.json",
+        "raw_text": "raw/doc-01-rep1.raw.txt",
+        "prediction": "preds/rep1/doc-01.json"
+      },
+      "model_output_valid_json": false
+    },
+    {
+      "doc_id": "doc-02",
+      "rep": 1,
+      "status": "model_failure",
+      "started_at": "2026-08-11T02:41:34.301Z",
+      "finished_at": "2026-08-11T02:41:46.106Z",
+      "wall_clock_seconds": 11.804786,
+      "attempts": 1,
+      "retry_log": [
+        {
+          "attempt": 1,
+          "started_at": "2026-08-11T02:41:36.253Z",
+          "finished_at": "2026-08-11T02:41:46.069Z",
+          "wall_clock_seconds": 9.816354,
+          "status": "success",
+          "returncode": 0,
+          "reason": null,
+          "will_retry": false,
+          "stderr": "",
+          "launch_error": null
+        }
+      ],
+      "resume_skips": 0,
+      "files": {
+        "result_json": "raw/doc-02-rep1.result.json",
+        "raw_text": "raw/doc-02-rep1.raw.txt",
+        "prediction": "preds/rep1/doc-02.json"
+      },
+      "model_output_valid_json": false
+    }
+  ],
+  "summary": {
+    "total": 2,
+    "completed": 0,
+    "model_failures": 2,
+    "transport_failures": 0,
+    "skipped_existing": 0
+  }
+}

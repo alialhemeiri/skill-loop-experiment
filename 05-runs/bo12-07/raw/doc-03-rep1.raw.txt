@@ -1,0 +1,1 @@
+{"landlord_name":"Nabil Khourani","tenant_name":"KOFI MENSIMA","unit_number":"F-2310","community":"Al Dana Courtyard","contract_start_date":"2026-09-29","contract_end_date":null,"annual_rent_aed":114000,"security_deposit_aed":null,"number_of_payments":null,"notice_period_days":60,"early_termination_penalty_months":null,"furnished_status":null}

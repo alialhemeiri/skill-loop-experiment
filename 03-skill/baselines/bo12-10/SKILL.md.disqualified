@@ -1,0 +1,129 @@
+# UAE Residential Tenancy Contract Field Extraction
+
+## Core procedure
+
+1. Read the entire document before extracting values.
+2. Identify the current operative tenancy, its premises, parties, schedules, special conditions, and effective amendments.
+3. For each field, retain candidates only when a label, table row, definition, or sentence clearly links the value to that field.
+4. Resolve competing candidates before normalizing them.
+5. Use only document evidence. Do not fill gaps from common UAE practice, outside knowledge, or arithmetic except for the permitted unit conversions below.
+
+## Output contract
+
+- Return exactly one valid bare JSON object, without markdown, commentary, or reasoning.
+- Include every harness key exactly once and add no keys.
+- Follow the harness types exactly. Keep numeric-looking unit identifiers as JSON strings.
+- Return rent, deposit, payment count, and notice days as unquoted integers.
+- Return the penalty months as an unquoted integer or decimal.
+- Return furnished status only as `"furnished"`, `"semi-furnished"`, `"unfurnished"`, or `null`.
+- Return JSON `null` for an unstated, blank, inapplicable, unresolved, or unrepresentable value. Never use `""`, `"N/A"`, `"unknown"`, or `"null"`.
+- Return `0` only when the agreement expressly states zero, none, or that the relevant numeric obligation is not required. Absence alone means `null`.
+- Trim surrounding whitespace and labels, preserve meaningful spelling and punctuation, and escape JSON characters correctly.
+
+## Evidence and conflicts
+
+- Bind table values using their row label, column heading, alignment, and continuation lines together. Do not select a nearby value from another row or column.
+- Treat `Label: value`, `Label - value`, pipe-separated rows, and a label followed by its value on the next line as possible label-value structures.
+- Ignore blank fields, placeholders, drafting notes, examples, unselected options, and unchecked checkboxes.
+- Ignore proposed, previous, expired, superseded, or reference-contract values unless the document makes them current.
+- Do not combine fields from different properties, tenancy periods, or agreements.
+
+Prefer evidence in this order:
+
+1. An effective amendment, addendum, correction, or special condition explicitly changing the field.
+2. A completed current key-terms, particulars, premises, or rent schedule.
+3. An operative party definition, premises description, or contractual clause.
+4. A recital or signature block that clearly identifies the requested role or field.
+
+- Let a specific express override control a general provision. Do not prefer a value merely because it appears later.
+- When compatible sources differ only in abbreviation or detail, use the more complete clearly supported value.
+- When equally authoritative current sources materially conflict and no correction or override resolves them, return `null` for that field.
+- Reject names, dates, amounts, and counts from administrative clauses unless they directly state the requested tenancy term.
+
+## Parties
+
+- Extract `landlord_name` and `tenant_name` from parties expressly designated as Landlord and Tenant.
+- Accept Owner or Lessor for the landlord, and Lessee or Renter for the tenant, only when the agreement makes that person or entity a contracting party.
+- Use labels such as First Party or Second Party only after the document explicitly maps them to Landlord or Tenant.
+- Do not treat an occupant as the tenant unless the agreement expressly equates those roles.
+- Exclude brokers, agents, property managers, representatives, signatories acting for an entity, witnesses, guests, emergency contacts, and utility account holders.
+- Return the principal's name rather than the representative's name when one acts on behalf of the other.
+- Remove honorifics, role annotations, ID numbers, nationality, contact details, and addresses. Preserve initials, name order, meaningful punctuation, and entity suffixes such as LLC or PJSC.
+- If several people are jointly designated in one role, preserve the complete joint designation as one string rather than choosing one person.
+
+## Premises
+
+- Extract `unit_number` from the current leased-premises description or property schedule.
+- Return only the premises identifier while preserving letters, hyphens, slashes, spaces that belong to it, and leading zeroes. For example, `Apartment No. 1204` yields `"1204"` and `Villa V-07` yields `"V-07"`.
+- Do not substitute a building, tower, floor, plot, parking bay, title-deed number, account number, meter number, cheque number, or Ejari reference.
+- Extract `community` from an explicit Community, Area, Neighborhood, or master-development field, or from an address component that clearly functions as the neighborhood containing the premises.
+- Do not substitute the building or tower name, street, developer, city, or Emirate. Do not infer a community from outside geographic knowledge.
+- Return `null` when no address component is clearly identifiable as the community.
+
+## Contract dates
+
+- Extract only the current fixed tenancy's commencement/start date and expiry/end date.
+- Accept clearly associated labels such as Tenancy From/To, Lease Commencement/Expiry, or a grammatical range such as `from X until Y`.
+- Do not use signature, execution, issue, registration, Ejari, handover, move-in, cheque, invoice, notice, ID-expiry, or amendment dates unless expressly equated with a tenancy boundary.
+- Convert complete Gregorian dates to `YYYY-MM-DD` and validate the calendar date.
+- Interpret slash dates as day/month/year by UAE convention. Use month/day/year only when the document indicates it or day/month/year is impossible while month/day/year is valid. Preserve year-first order when clearly shown.
+- Expand a two-digit year only when the century is unambiguous from the document; otherwise return `null`.
+- Return `null` for a date missing its day, month, or year. Do not convert a Hijri-only date without an expressly supplied Gregorian equivalent.
+- Confirm that the chosen end date follows the chosen start date. If not, recheck the evidence; never silently swap, repair, or invent either date.
+- Do not calculate an omitted boundary from the other boundary, a duration, or an anniversary.
+
+## Rent and security deposit
+
+- Extract `annual_rent_aed` from an Annual Rent, Yearly Rent, or Per Annum amount. Also accept a total explicitly described as rent for the current tenancy year or stated 12-month term.
+- Do not annualize monthly, quarterly, instalment, or partial-term rent.
+- Extract `security_deposit_aed` only from the tenancy's security, damage, or refundable premises deposit.
+- Accept an amount whose field heading supplies AED, or when the agreement expressly establishes AED/dirhams as the applicable currency. Do not convert another currency.
+- Parse digit or word amounts. When both appear, require them to agree; use an explicit corrected amount if supplied and otherwise return `null` on a material mismatch.
+- Remove `AED`, `Dhs`, `Dirhams`, grouping commas or spaces, and a trailing `/-`. Treat a decimal ending only in zero fils as a whole-dirham integer.
+- Do not round an amount containing nonzero fils to satisfy the integer type.
+- Do not calculate a deposit from a percentage, from months of rent, or from another amount. Use an accompanying explicit AED amount when present.
+- Exclude commission, booking or holding deposits, rent cheques, DEWA/chiller deposits, utility charges, Ejari or typing fees, maintenance thresholds, repair costs, access-card charges, guarantees, and arbitration costs.
+
+## Number of payments
+
+- Extract `number_of_payments` only from the annual rent payment plan.
+- Prefer an explicit rent-instalment or rent-cheque count, including word-number forms such as `four (4) post-dated cheques`.
+- Count clearly enumerated rent instalment rows when each row represents one distinct payment. Include a cash or transfer instalment alongside cheques when it is part of the rent plan.
+- Normalize an annual plan described as single/annually to `1`, semi-annually/half-yearly/twice yearly to `2`, quarterly to `4`, and monthly to `12`.
+- Treat ambiguous frequency terms such as `bi-monthly` as `null` unless an explicit count or complete schedule resolves them.
+- Do not count the security deposit, fees, utilities, non-rent cheques, cheque numbers, schedule dates, or clauses.
+- Do not derive the count by dividing annual rent by an instalment amount.
+
+## Notice period
+
+- Extract `notice_period_days` from a completed Notice Period field or a single unambiguous advance-notice requirement governing renewal, non-renewal, or voluntary termination of the tenancy.
+- If different eligible notice periods coexist, prefer the unqualified key-terms field; otherwise return `null` unless an override identifies the applicable value.
+- Convert weeks to seven days each and months to 30 days each. Convert a stated fraction only when it produces a whole number of days.
+- For `at least`, `minimum`, or `not less than N days`, return `N`. Return `null` for a range or unresolved alternatives.
+- Exclude access, inspection, repair, maintenance, default-cure, payment-reminder, rent-increase-only, utility, dispute, and service-of-process notices.
+- Do not confuse notice measured in months with a penalty measured in months.
+
+## Early-termination penalty
+
+- Extract `early_termination_penalty_months` only from an early-break financial penalty, compensation, or charge expressly measured as a number of months of rent.
+- Normalize word numbers and fractions, including `half a month`, `1½ months`, and `two and a half months`, to a JSON number.
+- Treat a notice requirement as notice, not as a penalty, even when both use months.
+- Do not convert an AED fee, forfeited deposit, remaining rent, or percentage into months, even when monthly or annual rent is available.
+- Return `null` for tiered, ranged, or alternative formulas that do not yield one applicable month count.
+- Return `0` only when the agreement expressly states that early termination carries no penalty.
+
+## Furnished status
+
+- Normalize explicit `furnished` or `fully furnished` to `"furnished"`.
+- Normalize `semi-furnished`, `partly furnished`, or `partially furnished` to `"semi-furnished"`.
+- Normalize `unfurnished`, `not furnished`, or `without furniture` to `"unfurnished"`.
+- Use a checkbox or option list only when one choice is clearly selected.
+- Do not infer status from an inventory, appliances, fitted cupboards, curtains, white goods, photographs, or an `as-is` clause alone.
+- Return `null` for conflicting or unselected furnishing descriptions.
+
+## Final audit
+
+- Verify that every non-null value is supported by exact text tied to the correct field, role, premises, and current tenancy.
+- Verify ISO dates, integer money/count fields, numeric penalty months, the exact furnishing enum, and JSON `null` values.
+- Recheck every number against administrative distractors and every name against agent or representative roles.
+- Emit only the completed JSON object.

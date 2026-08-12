@@ -1,0 +1,16 @@
+```json
+{
+  "landlord_name": "Mariam Qasim Al Nuaimi",
+  "tenant_name": "PETRA HORVAT",
+  "unit_number": "A-3703",
+  "community": "Al Raha Dune Park",
+  "contract_start_date": "2026-12-08",
+  "contract_end_date": null,
+  "annual_rent_aed": 174000,
+  "security_deposit_aed": null,
+  "number_of_payments": 4,
+  "notice_period_days": 30,
+  "early_termination_penalty_months": null,
+  "furnished_status": "semi-furnished"
+}
+```

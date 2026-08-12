@@ -1,0 +1,14 @@
+{
+  "landlord_name": "Dario Kovac",
+  "tenant_name": "Salma Benyahia",
+  "unit_number": "B-1910",
+  "community": "Al Dana Courtyard",
+  "contract_start_date": "2026-09-13",
+  "contract_end_date": "2027-09-12",
+  "annual_rent_aed": 90000,
+  "security_deposit_aed": null,
+  "number_of_payments": 6,
+  "notice_period_days": null,
+  "early_termination_penalty_months": 1.5,
+  "furnished_status": "semi-furnished"
+}

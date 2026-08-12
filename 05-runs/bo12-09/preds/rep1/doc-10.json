@@ -1,0 +1,14 @@
+{
+"landlord_name": "Amina Bensaid",
+"tenant_name": "Marek Nowicki",
+"unit_number": "B-1405",
+"community": "Al Nakheel Gardens",
+"contract_start_date": "2027-02-04",
+"contract_end_date": null,
+"annual_rent_aed": 90000,
+"security_deposit_aed": null,
+"number_of_payments": 6,
+"notice_period_days": null,
+"early_termination_penalty_months": 2,
+"furnished_status": "furnished"
+}

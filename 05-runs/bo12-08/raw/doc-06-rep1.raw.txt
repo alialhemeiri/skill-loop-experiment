@@ -1,0 +1,1 @@
+{"landlord_name":"Tomasz Kowalski","tenant_name":"Mei Lin Tan","unit_number":"C-1801","community":"Qasr Willow Gardens","contract_start_date":"2026-11-26","contract_end_date":null,"annual_rent_aed":78000,"security_deposit_aed":null,"number_of_payments":1,"notice_period_days":null,"early_termination_penalty_months":1,"furnished_status":null}

@@ -1,0 +1,548 @@
+{
+  "batch_id": "g2-v0",
+  "model": "claude-sonnet-5",
+  "cli": {
+    "command": "claude",
+    "version": "2.1.227 (Claude Code)"
+  },
+  "skill": {
+    "path": "03-skill/versions/v0/SKILL.md",
+    "sha256": "57585893fe94b546ceb76f43f204828903e4e0ee285310f699f6b6e99f681174"
+  },
+  "worker": {
+    "path": "00-control/worker.json",
+    "sha256": "ecd944962b1ba0fc24a8cfe2eb266618438956a7426d814780b4969742eb3e2f"
+  },
+  "runner": {
+    "path": "04-runner/run.py",
+    "sha256": "0d71817f9e72ba3ff0dcac97a21e411273ca08919d34afcff91aaf298a5c8f4c"
+  },
+  "fixed_schema_sha256": "837c9a53491f7e4c12d8c6dd5ea4954bccbeed1e884be23852f4ea6c363b4b4e",
+  "system_prompt": {
+    "path": "00-control/worker-system-prompt.txt",
+    "sha256": "1f8e3cda93cc7985cedcbec46f911a0251c4cf81fdd25cabc9513872486a6e94"
+  },
+  "documents": {
+    "doc-11": {
+      "path": "01-fixtures/docs/holdout/doc-11.txt",
+      "sha256": "52863a32b4ec93dd05a21ba4a97ba81155c9c464a70c935b022500e3b6c481ce"
+    },
+    "doc-12": {
+      "path": "01-fixtures/docs/holdout/doc-12.txt",
+      "sha256": "3f34aa1e8c05b28586f6204335064d0887335a7a6494f372703cad38ffc2a2a2"
+    },
+    "doc-13": {
+      "path": "01-fixtures/docs/holdout/doc-13.txt",
+      "sha256": "6c40969855ff7f3d5bd5034a9e49421e8c2fd22a9b8da18edd5890ccf1968477"
+    },
+    "doc-14": {
+      "path": "01-fixtures/docs/holdout/doc-14.txt",
+      "sha256": "23b875f3c11870df09afa7e154ce2062b342e10b4aff195553f04deb38897e12"
+    },
+    "doc-15": {
+      "path": "01-fixtures/docs/holdout/doc-15.txt",
+      "sha256": "b7d213685ffe34949d5bc8e596b4c9edf8f68b2aa55787497b1762d052e662b5"
+    },
+    "doc-16": {
+      "path": "01-fixtures/docs/holdout/doc-16.txt",
+      "sha256": "3508798b6bfc64d5d65541e49e15e8d5a11702dd94209d065694fd5a2c9aef3e"
+    }
+  },
+  "fixture_snapshots": {
+    "documents": {
+      "doc-11": {
+        "path": "fixtures/docs/doc-11.txt",
+        "sha256": "52863a32b4ec93dd05a21ba4a97ba81155c9c464a70c935b022500e3b6c481ce"
+      },
+      "doc-12": {
+        "path": "fixtures/docs/doc-12.txt",
+        "sha256": "3f34aa1e8c05b28586f6204335064d0887335a7a6494f372703cad38ffc2a2a2"
+      },
+      "doc-13": {
+        "path": "fixtures/docs/doc-13.txt",
+        "sha256": "6c40969855ff7f3d5bd5034a9e49421e8c2fd22a9b8da18edd5890ccf1968477"
+      },
+      "doc-14": {
+        "path": "fixtures/docs/doc-14.txt",
+        "sha256": "23b875f3c11870df09afa7e154ce2062b342e10b4aff195553f04deb38897e12"
+      },
+      "doc-15": {
+        "path": "fixtures/docs/doc-15.txt",
+        "sha256": "b7d213685ffe34949d5bc8e596b4c9edf8f68b2aa55787497b1762d052e662b5"
+      },
+      "doc-16": {
+        "path": "fixtures/docs/doc-16.txt",
+        "sha256": "3508798b6bfc64d5d65541e49e15e8d5a11702dd94209d065694fd5a2c9aef3e"
+      }
+    },
+    "gold": {
+      "doc-11": {
+        "path": "fixtures/gold/doc-11.json",
+        "sha256": "ffeb643104a4efb04875ad479f15233eee6c523bc0a874ad6b5e546c894bc754"
+      },
+      "doc-12": {
+        "path": "fixtures/gold/doc-12.json",
+        "sha256": "a688209cdd9ca0f63271ce6745b036260477708e41b37a177c60d9e0123014e6"
+      },
+      "doc-13": {
+        "path": "fixtures/gold/doc-13.json",
+        "sha256": "2c9dd20bb4efd1402e045892c6fe2ed9d1adb59d5f2122b07e1f476c2646d87f"
+      },
+      "doc-14": {
+        "path": "fixtures/gold/doc-14.json",
+        "sha256": "701dc4a329885c4ff057975ff15dbe379be684e932a1559495fbd2b83cbbec14"
+      },
+      "doc-15": {
+        "path": "fixtures/gold/doc-15.json",
+        "sha256": "faa8ad3bcfc59ef5577f0b3f4fe348d7b71776eccd197ac94daf48ab8ec57f1a"
+      },
+      "doc-16": {
+        "path": "fixtures/gold/doc-16.json",
+        "sha256": "9dc9b97a11ef284104feab4531b13528eadd4605ba72712d191dc91d9e8e7103"
+      }
+    }
+  },
+  "docs_dir": "01-fixtures/docs/holdout",
+  "doc_ids": [
+    "doc-11",
+    "doc-12",
+    "doc-13",
+    "doc-14",
+    "doc-15",
+    "doc-16"
+  ],
+  "reps": 2,
+  "sleep_between_seconds": 2.0,
+  "allow_holdout": true,
+  "holdout_transport_retries": true,
+  "started_at": "2026-08-11T20:15:33.919Z",
+  "finished_at": "2026-08-11T20:18:18.974Z",
+  "wall_clock_seconds": 165.054929,
+  "resume_count": 0,
+  "invocations": [
+    {
+      "number": 1,
+      "started_at": "2026-08-11T20:15:33.919Z",
+      "finished_at": "2026-08-11T20:18:18.974Z",
+      "wall_clock_seconds": 165.054929,
+      "skipped_existing": 0
+    }
+  ],
+  "runs": [
+    {
+      "doc_id": "doc-11",
+      "rep": 1,
+      "status": "completed",
+      "started_at": "2026-08-11T20:15:34.208Z",
+      "finished_at": "2026-08-11T20:15:50.321Z",
+      "wall_clock_seconds": 16.113022,
+      "attempts": 1,
+      "retry_log": [
+        {
+          "attempt": 1,
+          "started_at": "2026-08-11T20:15:34.208Z",
+          "finished_at": "2026-08-11T20:15:50.279Z",
+          "wall_clock_seconds": 16.071055,
+          "status": "success",
+          "returncode": 0,
+          "reason": null,
+          "will_retry": false,
+          "stderr": "",
+          "launch_error": null
+        }
+      ],
+      "resume_skips": 0,
+      "fence_stripped": false,
+      "model_usage_keys": [
+        "claude-sonnet-5"
+      ],
+      "files": {
+        "result_json": "raw/doc-11-rep1.result.json",
+        "raw_text": "raw/doc-11-rep1.raw.txt",
+        "prediction": "preds/rep1/doc-11.json"
+      },
+      "model_output_valid_json": true
+    },
+    {
+      "doc_id": "doc-12",
+      "rep": 1,
+      "status": "completed",
+      "started_at": "2026-08-11T20:15:50.343Z",
+      "finished_at": "2026-08-11T20:16:01.042Z",
+      "wall_clock_seconds": 10.699499,
+      "attempts": 1,
+      "retry_log": [
+        {
+          "attempt": 1,
+          "started_at": "2026-08-11T20:15:52.279Z",
+          "finished_at": "2026-08-11T20:16:00.999Z",
+          "wall_clock_seconds": 8.719297,
+          "status": "success",
+          "returncode": 0,
+          "reason": null,
+          "will_retry": false,
+          "stderr": "",
+          "launch_error": null
+        }
+      ],
+      "resume_skips": 0,
+      "fence_stripped": false,
+      "model_usage_keys": [
+        "claude-sonnet-5"
+      ],
+      "files": {
+        "result_json": "raw/doc-12-rep1.result.json",
+        "raw_text": "raw/doc-12-rep1.raw.txt",
+        "prediction": "preds/rep1/doc-12.json"
+      },
+      "model_output_valid_json": true
+    },
+    {
+      "doc_id": "doc-13",
+      "rep": 1,
+      "status": "completed",
+      "started_at": "2026-08-11T20:16:01.065Z",
+      "finished_at": "2026-08-11T20:16:16.816Z",
+      "wall_clock_seconds": 15.751025,
+      "attempts": 1,
+      "retry_log": [
+        {
+          "attempt": 1,
+          "started_at": "2026-08-11T20:16:02.999Z",
+          "finished_at": "2026-08-11T20:16:16.773Z",
+          "wall_clock_seconds": 13.773816,
+          "status": "success",
+          "returncode": 0,
+          "reason": null,
+          "will_retry": false,
+          "stderr": "",
+          "launch_error": null
+        }
+      ],
+      "resume_skips": 0,
+      "fence_stripped": false,
+      "model_usage_keys": [
+        "claude-sonnet-5"
+      ],
+      "files": {
+        "result_json": "raw/doc-13-rep1.result.json",
+        "raw_text": "raw/doc-13-rep1.raw.txt",
+        "prediction": "preds/rep1/doc-13.json"
+      },
+      "model_output_valid_json": true
+    },
+    {
+      "doc_id": "doc-14",
+      "rep": 1,
+      "status": "completed",
+      "started_at": "2026-08-11T20:16:16.837Z",
+      "finished_at": "2026-08-11T20:16:28.264Z",
+      "wall_clock_seconds": 11.426667,
+      "attempts": 1,
+      "retry_log": [
+        {
+          "attempt": 1,
+          "started_at": "2026-08-11T20:16:18.773Z",
+          "finished_at": "2026-08-11T20:16:28.222Z",
+          "wall_clock_seconds": 9.448976,
+          "status": "success",
+          "returncode": 0,
+          "reason": null,
+          "will_retry": false,
+          "stderr": "",
+          "launch_error": null
+        }
+      ],
+      "resume_skips": 0,
+      "fence_stripped": false,
+      "model_usage_keys": [
+        "claude-sonnet-5"
+      ],
+      "files": {
+        "result_json": "raw/doc-14-rep1.result.json",
+        "raw_text": "raw/doc-14-rep1.raw.txt",
+        "prediction": "preds/rep1/doc-14.json"
+      },
+      "model_output_valid_json": true
+    },
+    {
+      "doc_id": "doc-15",
+      "rep": 1,
+      "status": "completed",
+      "started_at": "2026-08-11T20:16:28.285Z",
+      "finished_at": "2026-08-11T20:16:48.337Z",
+      "wall_clock_seconds": 20.051888,
+      "attempts": 1,
+      "retry_log": [
+        {
+          "attempt": 1,
+          "started_at": "2026-08-11T20:16:30.222Z",
+          "finished_at": "2026-08-11T20:16:48.293Z",
+          "wall_clock_seconds": 18.071422,
+          "status": "success",
+          "returncode": 0,
+          "reason": null,
+          "will_retry": false,
+          "stderr": "",
+          "launch_error": null
+        }
+      ],
+      "resume_skips": 0,
+      "fence_stripped": false,
+      "model_usage_keys": [
+        "claude-sonnet-5"
+      ],
+      "files": {
+        "result_json": "raw/doc-15-rep1.result.json",
+        "raw_text": "raw/doc-15-rep1.raw.txt",
+        "prediction": "preds/rep1/doc-15.json"
+      },
+      "model_output_valid_json": true
+    },
+    {
+      "doc_id": "doc-16",
+      "rep": 1,
+      "status": "completed",
+      "started_at": "2026-08-11T20:16:48.359Z",
+      "finished_at": "2026-08-11T20:17:04.127Z",
+      "wall_clock_seconds": 15.767434,
+      "attempts": 1,
+      "retry_log": [
+        {
+          "attempt": 1,
+          "started_at": "2026-08-11T20:16:50.293Z",
+          "finished_at": "2026-08-11T20:17:04.084Z",
+          "wall_clock_seconds": 13.790392,
+          "status": "success",
+          "returncode": 0,
+          "reason": null,
+          "will_retry": false,
+          "stderr": "",
+          "launch_error": null
+        }
+      ],
+      "resume_skips": 0,
+      "fence_stripped": false,
+      "model_usage_keys": [
+        "claude-sonnet-5"
+      ],
+      "files": {
+        "result_json": "raw/doc-16-rep1.result.json",
+        "raw_text": "raw/doc-16-rep1.raw.txt",
+        "prediction": "preds/rep1/doc-16.json"
+      },
+      "model_output_valid_json": true
+    },
+    {
+      "doc_id": "doc-11",
+      "rep": 2,
+      "status": "completed",
+      "started_at": "2026-08-11T20:17:04.149Z",
+      "finished_at": "2026-08-11T20:17:13.785Z",
+      "wall_clock_seconds": 9.63679,
+      "attempts": 1,
+      "retry_log": [
+        {
+          "attempt": 1,
+          "started_at": "2026-08-11T20:17:06.084Z",
+          "finished_at": "2026-08-11T20:17:13.742Z",
+          "wall_clock_seconds": 7.65857,
+          "status": "success",
+          "returncode": 0,
+          "reason": null,
+          "will_retry": false,
+          "stderr": "",
+          "launch_error": null
+        }
+      ],
+      "resume_skips": 0,
+      "fence_stripped": false,
+      "model_usage_keys": [
+        "claude-sonnet-5"
+      ],
+      "files": {
+        "result_json": "raw/doc-11-rep2.result.json",
+        "raw_text": "raw/doc-11-rep2.raw.txt",
+        "prediction": "preds/rep2/doc-11.json"
+      },
+      "model_output_valid_json": true
+    },
+    {
+      "doc_id": "doc-12",
+      "rep": 2,
+      "status": "completed",
+      "started_at": "2026-08-11T20:17:13.807Z",
+      "finished_at": "2026-08-11T20:17:25.233Z",
+      "wall_clock_seconds": 11.425983,
+      "attempts": 1,
+      "retry_log": [
+        {
+          "attempt": 1,
+          "started_at": "2026-08-11T20:17:15.742Z",
+          "finished_at": "2026-08-11T20:17:25.189Z",
+          "wall_clock_seconds": 9.446382,
+          "status": "success",
+          "returncode": 0,
+          "reason": null,
+          "will_retry": false,
+          "stderr": "",
+          "launch_error": null
+        }
+      ],
+      "resume_skips": 0,
+      "fence_stripped": false,
+      "model_usage_keys": [
+        "claude-sonnet-5"
+      ],
+      "files": {
+        "result_json": "raw/doc-12-rep2.result.json",
+        "raw_text": "raw/doc-12-rep2.raw.txt",
+        "prediction": "preds/rep2/doc-12.json"
+      },
+      "model_output_valid_json": true
+    },
+    {
+      "doc_id": "doc-13",
+      "rep": 2,
+      "status": "completed",
+      "started_at": "2026-08-11T20:17:25.255Z",
+      "finished_at": "2026-08-11T20:17:33.501Z",
+      "wall_clock_seconds": 8.24657,
+      "attempts": 1,
+      "retry_log": [
+        {
+          "attempt": 1,
+          "started_at": "2026-08-11T20:17:27.189Z",
+          "finished_at": "2026-08-11T20:17:33.458Z",
+          "wall_clock_seconds": 6.268921,
+          "status": "success",
+          "returncode": 0,
+          "reason": null,
+          "will_retry": false,
+          "stderr": "",
+          "launch_error": null
+        }
+      ],
+      "resume_skips": 0,
+      "fence_stripped": false,
+      "model_usage_keys": [
+        "claude-sonnet-5"
+      ],
+      "files": {
+        "result_json": "raw/doc-13-rep2.result.json",
+        "raw_text": "raw/doc-13-rep2.raw.txt",
+        "prediction": "preds/rep2/doc-13.json"
+      },
+      "model_output_valid_json": true
+    },
+    {
+      "doc_id": "doc-14",
+      "rep": 2,
+      "status": "completed",
+      "started_at": "2026-08-11T20:17:33.524Z",
+      "finished_at": "2026-08-11T20:17:44.300Z",
+      "wall_clock_seconds": 10.775957,
+      "attempts": 1,
+      "retry_log": [
+        {
+          "attempt": 1,
+          "started_at": "2026-08-11T20:17:35.458Z",
+          "finished_at": "2026-08-11T20:17:44.256Z",
+          "wall_clock_seconds": 8.798164,
+          "status": "success",
+          "returncode": 0,
+          "reason": null,
+          "will_retry": false,
+          "stderr": "",
+          "launch_error": null
+        }
+      ],
+      "resume_skips": 0,
+      "fence_stripped": false,
+      "model_usage_keys": [
+        "claude-sonnet-5"
+      ],
+      "files": {
+        "result_json": "raw/doc-14-rep2.result.json",
+        "raw_text": "raw/doc-14-rep2.raw.txt",
+        "prediction": "preds/rep2/doc-14.json"
+      },
+      "model_output_valid_json": true
+    },
+    {
+      "doc_id": "doc-15",
+      "rep": 2,
+      "status": "completed",
+      "started_at": "2026-08-11T20:17:44.322Z",
+      "finished_at": "2026-08-11T20:18:00.601Z",
+      "wall_clock_seconds": 16.278532,
+      "attempts": 1,
+      "retry_log": [
+        {
+          "attempt": 1,
+          "started_at": "2026-08-11T20:17:46.256Z",
+          "finished_at": "2026-08-11T20:18:00.559Z",
+          "wall_clock_seconds": 14.303382,
+          "status": "success",
+          "returncode": 0,
+          "reason": null,
+          "will_retry": false,
+          "stderr": "",
+          "launch_error": null
+        }
+      ],
+      "resume_skips": 0,
+      "fence_stripped": false,
+      "model_usage_keys": [
+        "claude-sonnet-5"
+      ],
+      "files": {
+        "result_json": "raw/doc-15-rep2.result.json",
+        "raw_text": "raw/doc-15-rep2.raw.txt",
+        "prediction": "preds/rep2/doc-15.json"
+      },
+      "model_output_valid_json": true
+    },
+    {
+      "doc_id": "doc-16",
+      "rep": 2,
+      "status": "completed",
+      "started_at": "2026-08-11T20:18:00.622Z",
+      "finished_at": "2026-08-11T20:18:18.962Z",
+      "wall_clock_seconds": 18.339975,
+      "attempts": 1,
+      "retry_log": [
+        {
+          "attempt": 1,
+          "started_at": "2026-08-11T20:18:02.559Z",
+          "finished_at": "2026-08-11T20:18:18.918Z",
+          "wall_clock_seconds": 16.35871,
+          "status": "success",
+          "returncode": 0,
+          "reason": null,
+          "will_retry": false,
+          "stderr": "",
+          "launch_error": null
+        }
+      ],
+      "resume_skips": 0,
+      "fence_stripped": false,
+      "model_usage_keys": [
+        "claude-sonnet-5"
+      ],
+      "files": {
+        "result_json": "raw/doc-16-rep2.result.json",
+        "raw_text": "raw/doc-16-rep2.raw.txt",
+        "prediction": "preds/rep2/doc-16.json"
+      },
+      "model_output_valid_json": true
+    }
+  ],
+  "summary": {
+    "total": 12,
+    "completed": 12,
+    "model_failures": 0,
+    "transport_failures": 0,
+    "skipped_existing": 0
+  }
+}

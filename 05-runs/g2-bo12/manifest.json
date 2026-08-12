@@ -1,0 +1,548 @@
+{
+  "batch_id": "g2-bo12",
+  "model": "claude-sonnet-5",
+  "cli": {
+    "command": "claude",
+    "version": "2.1.227 (Claude Code)"
+  },
+  "skill": {
+    "path": "03-skill/baselines/bo12-04/SKILL.md",
+    "sha256": "912e9105678b9f2acdfbd4e1bf450afca5da331414acac2ae2da06430d73c9f0"
+  },
+  "worker": {
+    "path": "00-control/worker.json",
+    "sha256": "ecd944962b1ba0fc24a8cfe2eb266618438956a7426d814780b4969742eb3e2f"
+  },
+  "runner": {
+    "path": "04-runner/run.py",
+    "sha256": "0d71817f9e72ba3ff0dcac97a21e411273ca08919d34afcff91aaf298a5c8f4c"
+  },
+  "fixed_schema_sha256": "837c9a53491f7e4c12d8c6dd5ea4954bccbeed1e884be23852f4ea6c363b4b4e",
+  "system_prompt": {
+    "path": "00-control/worker-system-prompt.txt",
+    "sha256": "1f8e3cda93cc7985cedcbec46f911a0251c4cf81fdd25cabc9513872486a6e94"
+  },
+  "documents": {
+    "doc-11": {
+      "path": "01-fixtures/docs/holdout/doc-11.txt",
+      "sha256": "52863a32b4ec93dd05a21ba4a97ba81155c9c464a70c935b022500e3b6c481ce"
+    },
+    "doc-12": {
+      "path": "01-fixtures/docs/holdout/doc-12.txt",
+      "sha256": "3f34aa1e8c05b28586f6204335064d0887335a7a6494f372703cad38ffc2a2a2"
+    },
+    "doc-13": {
+      "path": "01-fixtures/docs/holdout/doc-13.txt",
+      "sha256": "6c40969855ff7f3d5bd5034a9e49421e8c2fd22a9b8da18edd5890ccf1968477"
+    },
+    "doc-14": {
+      "path": "01-fixtures/docs/holdout/doc-14.txt",
+      "sha256": "23b875f3c11870df09afa7e154ce2062b342e10b4aff195553f04deb38897e12"
+    },
+    "doc-15": {
+      "path": "01-fixtures/docs/holdout/doc-15.txt",
+      "sha256": "b7d213685ffe34949d5bc8e596b4c9edf8f68b2aa55787497b1762d052e662b5"
+    },
+    "doc-16": {
+      "path": "01-fixtures/docs/holdout/doc-16.txt",
+      "sha256": "3508798b6bfc64d5d65541e49e15e8d5a11702dd94209d065694fd5a2c9aef3e"
+    }
+  },
+  "fixture_snapshots": {
+    "documents": {
+      "doc-11": {
+        "path": "fixtures/docs/doc-11.txt",
+        "sha256": "52863a32b4ec93dd05a21ba4a97ba81155c9c464a70c935b022500e3b6c481ce"
+      },
+      "doc-12": {
+        "path": "fixtures/docs/doc-12.txt",
+        "sha256": "3f34aa1e8c05b28586f6204335064d0887335a7a6494f372703cad38ffc2a2a2"
+      },
+      "doc-13": {
+        "path": "fixtures/docs/doc-13.txt",
+        "sha256": "6c40969855ff7f3d5bd5034a9e49421e8c2fd22a9b8da18edd5890ccf1968477"
+      },
+      "doc-14": {
+        "path": "fixtures/docs/doc-14.txt",
+        "sha256": "23b875f3c11870df09afa7e154ce2062b342e10b4aff195553f04deb38897e12"
+      },
+      "doc-15": {
+        "path": "fixtures/docs/doc-15.txt",
+        "sha256": "b7d213685ffe34949d5bc8e596b4c9edf8f68b2aa55787497b1762d052e662b5"
+      },
+      "doc-16": {
+        "path": "fixtures/docs/doc-16.txt",
+        "sha256": "3508798b6bfc64d5d65541e49e15e8d5a11702dd94209d065694fd5a2c9aef3e"
+      }
+    },
+    "gold": {
+      "doc-11": {
+        "path": "fixtures/gold/doc-11.json",
+        "sha256": "ffeb643104a4efb04875ad479f15233eee6c523bc0a874ad6b5e546c894bc754"
+      },
+      "doc-12": {
+        "path": "fixtures/gold/doc-12.json",
+        "sha256": "a688209cdd9ca0f63271ce6745b036260477708e41b37a177c60d9e0123014e6"
+      },
+      "doc-13": {
+        "path": "fixtures/gold/doc-13.json",
+        "sha256": "2c9dd20bb4efd1402e045892c6fe2ed9d1adb59d5f2122b07e1f476c2646d87f"
+      },
+      "doc-14": {
+        "path": "fixtures/gold/doc-14.json",
+        "sha256": "701dc4a329885c4ff057975ff15dbe379be684e932a1559495fbd2b83cbbec14"
+      },
+      "doc-15": {
+        "path": "fixtures/gold/doc-15.json",
+        "sha256": "faa8ad3bcfc59ef5577f0b3f4fe348d7b71776eccd197ac94daf48ab8ec57f1a"
+      },
+      "doc-16": {
+        "path": "fixtures/gold/doc-16.json",
+        "sha256": "9dc9b97a11ef284104feab4531b13528eadd4605ba72712d191dc91d9e8e7103"
+      }
+    }
+  },
+  "docs_dir": "01-fixtures/docs/holdout",
+  "doc_ids": [
+    "doc-11",
+    "doc-12",
+    "doc-13",
+    "doc-14",
+    "doc-15",
+    "doc-16"
+  ],
+  "reps": 2,
+  "sleep_between_seconds": 2.0,
+  "allow_holdout": true,
+  "holdout_transport_retries": true,
+  "started_at": "2026-08-11T20:20:21.958Z",
+  "finished_at": "2026-08-11T20:23:08.474Z",
+  "wall_clock_seconds": 166.515564,
+  "resume_count": 0,
+  "invocations": [
+    {
+      "number": 1,
+      "started_at": "2026-08-11T20:20:21.958Z",
+      "finished_at": "2026-08-11T20:23:08.474Z",
+      "wall_clock_seconds": 166.515564,
+      "skipped_existing": 0
+    }
+  ],
+  "runs": [
+    {
+      "doc_id": "doc-11",
+      "rep": 1,
+      "status": "completed",
+      "started_at": "2026-08-11T20:20:22.244Z",
+      "finished_at": "2026-08-11T20:20:35.629Z",
+      "wall_clock_seconds": 13.385052,
+      "attempts": 1,
+      "retry_log": [
+        {
+          "attempt": 1,
+          "started_at": "2026-08-11T20:20:22.244Z",
+          "finished_at": "2026-08-11T20:20:35.577Z",
+          "wall_clock_seconds": 13.332641,
+          "status": "success",
+          "returncode": 0,
+          "reason": null,
+          "will_retry": false,
+          "stderr": "",
+          "launch_error": null
+        }
+      ],
+      "resume_skips": 0,
+      "fence_stripped": false,
+      "model_usage_keys": [
+        "claude-sonnet-5"
+      ],
+      "files": {
+        "result_json": "raw/doc-11-rep1.result.json",
+        "raw_text": "raw/doc-11-rep1.raw.txt",
+        "prediction": "preds/rep1/doc-11.json"
+      },
+      "model_output_valid_json": true
+    },
+    {
+      "doc_id": "doc-12",
+      "rep": 1,
+      "status": "completed",
+      "started_at": "2026-08-11T20:20:35.656Z",
+      "finished_at": "2026-08-11T20:20:48.745Z",
+      "wall_clock_seconds": 13.088231,
+      "attempts": 1,
+      "retry_log": [
+        {
+          "attempt": 1,
+          "started_at": "2026-08-11T20:20:37.577Z",
+          "finished_at": "2026-08-11T20:20:48.693Z",
+          "wall_clock_seconds": 11.116258,
+          "status": "success",
+          "returncode": 0,
+          "reason": null,
+          "will_retry": false,
+          "stderr": "",
+          "launch_error": null
+        }
+      ],
+      "resume_skips": 0,
+      "fence_stripped": false,
+      "model_usage_keys": [
+        "claude-sonnet-5"
+      ],
+      "files": {
+        "result_json": "raw/doc-12-rep1.result.json",
+        "raw_text": "raw/doc-12-rep1.raw.txt",
+        "prediction": "preds/rep1/doc-12.json"
+      },
+      "model_output_valid_json": true
+    },
+    {
+      "doc_id": "doc-13",
+      "rep": 1,
+      "status": "completed",
+      "started_at": "2026-08-11T20:20:48.772Z",
+      "finished_at": "2026-08-11T20:21:03.436Z",
+      "wall_clock_seconds": 14.663696,
+      "attempts": 1,
+      "retry_log": [
+        {
+          "attempt": 1,
+          "started_at": "2026-08-11T20:20:50.693Z",
+          "finished_at": "2026-08-11T20:21:03.387Z",
+          "wall_clock_seconds": 12.69414,
+          "status": "success",
+          "returncode": 0,
+          "reason": null,
+          "will_retry": false,
+          "stderr": "",
+          "launch_error": null
+        }
+      ],
+      "resume_skips": 0,
+      "fence_stripped": false,
+      "model_usage_keys": [
+        "claude-sonnet-5"
+      ],
+      "files": {
+        "result_json": "raw/doc-13-rep1.result.json",
+        "raw_text": "raw/doc-13-rep1.raw.txt",
+        "prediction": "preds/rep1/doc-13.json"
+      },
+      "model_output_valid_json": true
+    },
+    {
+      "doc_id": "doc-14",
+      "rep": 1,
+      "status": "completed",
+      "started_at": "2026-08-11T20:21:03.460Z",
+      "finished_at": "2026-08-11T20:21:16.996Z",
+      "wall_clock_seconds": 13.535222,
+      "attempts": 1,
+      "retry_log": [
+        {
+          "attempt": 1,
+          "started_at": "2026-08-11T20:21:05.387Z",
+          "finished_at": "2026-08-11T20:21:16.944Z",
+          "wall_clock_seconds": 11.557028,
+          "status": "success",
+          "returncode": 0,
+          "reason": null,
+          "will_retry": false,
+          "stderr": "",
+          "launch_error": null
+        }
+      ],
+      "resume_skips": 0,
+      "fence_stripped": false,
+      "model_usage_keys": [
+        "claude-sonnet-5"
+      ],
+      "files": {
+        "result_json": "raw/doc-14-rep1.result.json",
+        "raw_text": "raw/doc-14-rep1.raw.txt",
+        "prediction": "preds/rep1/doc-14.json"
+      },
+      "model_output_valid_json": true
+    },
+    {
+      "doc_id": "doc-15",
+      "rep": 1,
+      "status": "completed",
+      "started_at": "2026-08-11T20:21:17.021Z",
+      "finished_at": "2026-08-11T20:21:31.070Z",
+      "wall_clock_seconds": 14.048886,
+      "attempts": 1,
+      "retry_log": [
+        {
+          "attempt": 1,
+          "started_at": "2026-08-11T20:21:18.944Z",
+          "finished_at": "2026-08-11T20:21:31.022Z",
+          "wall_clock_seconds": 12.077786,
+          "status": "success",
+          "returncode": 0,
+          "reason": null,
+          "will_retry": false,
+          "stderr": "",
+          "launch_error": null
+        }
+      ],
+      "resume_skips": 0,
+      "fence_stripped": false,
+      "model_usage_keys": [
+        "claude-sonnet-5"
+      ],
+      "files": {
+        "result_json": "raw/doc-15-rep1.result.json",
+        "raw_text": "raw/doc-15-rep1.raw.txt",
+        "prediction": "preds/rep1/doc-15.json"
+      },
+      "model_output_valid_json": true
+    },
+    {
+      "doc_id": "doc-16",
+      "rep": 1,
+      "status": "completed",
+      "started_at": "2026-08-11T20:21:31.094Z",
+      "finished_at": "2026-08-11T20:21:44.643Z",
+      "wall_clock_seconds": 13.549025,
+      "attempts": 1,
+      "retry_log": [
+        {
+          "attempt": 1,
+          "started_at": "2026-08-11T20:21:33.022Z",
+          "finished_at": "2026-08-11T20:21:44.596Z",
+          "wall_clock_seconds": 11.573959,
+          "status": "success",
+          "returncode": 0,
+          "reason": null,
+          "will_retry": false,
+          "stderr": "",
+          "launch_error": null
+        }
+      ],
+      "resume_skips": 0,
+      "fence_stripped": false,
+      "model_usage_keys": [
+        "claude-sonnet-5"
+      ],
+      "files": {
+        "result_json": "raw/doc-16-rep1.result.json",
+        "raw_text": "raw/doc-16-rep1.raw.txt",
+        "prediction": "preds/rep1/doc-16.json"
+      },
+      "model_output_valid_json": true
+    },
+    {
+      "doc_id": "doc-11",
+      "rep": 2,
+      "status": "completed",
+      "started_at": "2026-08-11T20:21:44.667Z",
+      "finished_at": "2026-08-11T20:22:01.244Z",
+      "wall_clock_seconds": 16.576503,
+      "attempts": 1,
+      "retry_log": [
+        {
+          "attempt": 1,
+          "started_at": "2026-08-11T20:21:46.596Z",
+          "finished_at": "2026-08-11T20:22:01.198Z",
+          "wall_clock_seconds": 14.602315,
+          "status": "success",
+          "returncode": 0,
+          "reason": null,
+          "will_retry": false,
+          "stderr": "",
+          "launch_error": null
+        }
+      ],
+      "resume_skips": 0,
+      "fence_stripped": false,
+      "model_usage_keys": [
+        "claude-sonnet-5"
+      ],
+      "files": {
+        "result_json": "raw/doc-11-rep2.result.json",
+        "raw_text": "raw/doc-11-rep2.raw.txt",
+        "prediction": "preds/rep2/doc-11.json"
+      },
+      "model_output_valid_json": true
+    },
+    {
+      "doc_id": "doc-12",
+      "rep": 2,
+      "status": "completed",
+      "started_at": "2026-08-11T20:22:01.268Z",
+      "finished_at": "2026-08-11T20:22:13.776Z",
+      "wall_clock_seconds": 12.508394,
+      "attempts": 1,
+      "retry_log": [
+        {
+          "attempt": 1,
+          "started_at": "2026-08-11T20:22:03.198Z",
+          "finished_at": "2026-08-11T20:22:13.729Z",
+          "wall_clock_seconds": 10.530675,
+          "status": "success",
+          "returncode": 0,
+          "reason": null,
+          "will_retry": false,
+          "stderr": "",
+          "launch_error": null
+        }
+      ],
+      "resume_skips": 0,
+      "fence_stripped": false,
+      "model_usage_keys": [
+        "claude-sonnet-5"
+      ],
+      "files": {
+        "result_json": "raw/doc-12-rep2.result.json",
+        "raw_text": "raw/doc-12-rep2.raw.txt",
+        "prediction": "preds/rep2/doc-12.json"
+      },
+      "model_output_valid_json": true
+    },
+    {
+      "doc_id": "doc-13",
+      "rep": 2,
+      "status": "completed",
+      "started_at": "2026-08-11T20:22:13.801Z",
+      "finished_at": "2026-08-11T20:22:28.658Z",
+      "wall_clock_seconds": 14.856208,
+      "attempts": 1,
+      "retry_log": [
+        {
+          "attempt": 1,
+          "started_at": "2026-08-11T20:22:15.729Z",
+          "finished_at": "2026-08-11T20:22:28.612Z",
+          "wall_clock_seconds": 12.882746,
+          "status": "success",
+          "returncode": 0,
+          "reason": null,
+          "will_retry": false,
+          "stderr": "",
+          "launch_error": null
+        }
+      ],
+      "resume_skips": 0,
+      "fence_stripped": false,
+      "model_usage_keys": [
+        "claude-sonnet-5"
+      ],
+      "files": {
+        "result_json": "raw/doc-13-rep2.result.json",
+        "raw_text": "raw/doc-13-rep2.raw.txt",
+        "prediction": "preds/rep2/doc-13.json"
+      },
+      "model_output_valid_json": true
+    },
+    {
+      "doc_id": "doc-14",
+      "rep": 2,
+      "status": "completed",
+      "started_at": "2026-08-11T20:22:28.682Z",
+      "finished_at": "2026-08-11T20:22:41.561Z",
+      "wall_clock_seconds": 12.878236,
+      "attempts": 1,
+      "retry_log": [
+        {
+          "attempt": 1,
+          "started_at": "2026-08-11T20:22:30.612Z",
+          "finished_at": "2026-08-11T20:22:41.514Z",
+          "wall_clock_seconds": 10.90198,
+          "status": "success",
+          "returncode": 0,
+          "reason": null,
+          "will_retry": false,
+          "stderr": "",
+          "launch_error": null
+        }
+      ],
+      "resume_skips": 0,
+      "fence_stripped": false,
+      "model_usage_keys": [
+        "claude-sonnet-5"
+      ],
+      "files": {
+        "result_json": "raw/doc-14-rep2.result.json",
+        "raw_text": "raw/doc-14-rep2.raw.txt",
+        "prediction": "preds/rep2/doc-14.json"
+      },
+      "model_output_valid_json": true
+    },
+    {
+      "doc_id": "doc-15",
+      "rep": 2,
+      "status": "completed",
+      "started_at": "2026-08-11T20:22:41.585Z",
+      "finished_at": "2026-08-11T20:22:53.497Z",
+      "wall_clock_seconds": 11.911773,
+      "attempts": 1,
+      "retry_log": [
+        {
+          "attempt": 1,
+          "started_at": "2026-08-11T20:22:43.514Z",
+          "finished_at": "2026-08-11T20:22:53.449Z",
+          "wall_clock_seconds": 9.935393,
+          "status": "success",
+          "returncode": 0,
+          "reason": null,
+          "will_retry": false,
+          "stderr": "",
+          "launch_error": null
+        }
+      ],
+      "resume_skips": 0,
+      "fence_stripped": false,
+      "model_usage_keys": [
+        "claude-sonnet-5"
+      ],
+      "files": {
+        "result_json": "raw/doc-15-rep2.result.json",
+        "raw_text": "raw/doc-15-rep2.raw.txt",
+        "prediction": "preds/rep2/doc-15.json"
+      },
+      "model_output_valid_json": true
+    },
+    {
+      "doc_id": "doc-16",
+      "rep": 2,
+      "status": "completed",
+      "started_at": "2026-08-11T20:22:53.521Z",
+      "finished_at": "2026-08-11T20:23:08.461Z",
+      "wall_clock_seconds": 14.940028,
+      "attempts": 1,
+      "retry_log": [
+        {
+          "attempt": 1,
+          "started_at": "2026-08-11T20:22:55.449Z",
+          "finished_at": "2026-08-11T20:23:08.409Z",
+          "wall_clock_seconds": 12.960048,
+          "status": "success",
+          "returncode": 0,
+          "reason": null,
+          "will_retry": false,
+          "stderr": "",
+          "launch_error": null
+        }
+      ],
+      "resume_skips": 0,
+      "fence_stripped": false,
+      "model_usage_keys": [
+        "claude-sonnet-5"
+      ],
+      "files": {
+        "result_json": "raw/doc-16-rep2.result.json",
+        "raw_text": "raw/doc-16-rep2.raw.txt",
+        "prediction": "preds/rep2/doc-16.json"
+      },
+      "model_output_valid_json": true
+    }
+  ],
+  "summary": {
+    "total": 12,
+    "completed": 12,
+    "model_failures": 0,
+    "transport_failures": 0,
+    "skipped_existing": 0
+  }
+}

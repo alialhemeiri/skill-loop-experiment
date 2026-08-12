@@ -1,0 +1,16 @@
+```json
+{
+  "landlord_name": "Anika Bergstrom",
+  "tenant_name": "Elena Vukovic",
+  "unit_number": "C-1008",
+  "community": "Jumeira Cedar Walk",
+  "contract_start_date": "2027-01-18",
+  "contract_end_date": null,
+  "annual_rent_aed": 156000,
+  "security_deposit_aed": null,
+  "number_of_payments": 12,
+  "notice_period_days": null,
+  "early_termination_penalty_months": 1,
+  "furnished_status": "unfurnished"
+}
+```

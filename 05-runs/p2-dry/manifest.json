@@ -1,0 +1,126 @@
+{
+  "batch_id": "p2-dry",
+  "model": "claude-sonnet-5",
+  "cli": {
+    "command": "claude",
+    "version": "2.1.227 (Claude Code)"
+  },
+  "skill": {
+    "path": "03-skill/versions/v0/SKILL.md",
+    "sha256": "57585893fe94b546ceb76f43f204828903e4e0ee285310f699f6b6e99f681174"
+  },
+  "worker": {
+    "path": "00-control/worker.json",
+    "sha256": "7c572c180c0e7de3155ddfcc02501bf15e6630766ef54fb196cee2efb8f7c7fc"
+  },
+  "runner": {
+    "path": "04-runner/run.py",
+    "sha256": "17aa048c68572800192d031e0c2413b8c5d9ed15086428b823d1507f769e0a62"
+  },
+  "fixed_schema_sha256": "837c9a53491f7e4c12d8c6dd5ea4954bccbeed1e884be23852f4ea6c363b4b4e",
+  "system_prompt": {
+    "path": "00-control/worker-system-prompt.txt",
+    "sha256": "a32f669094239e4cb0037abd12ad4614bac0d88e8fbab44b7c1db478f5c27e61"
+  },
+  "documents": {
+    "doc-01": {
+      "path": "01-fixtures/docs/train/doc-01.txt",
+      "sha256": "d1814a27e05961a4948d6c513f0c266d0f47cd00bddb900cd368f6ea67ed572d"
+    },
+    "doc-02": {
+      "path": "01-fixtures/docs/train/doc-02.txt",
+      "sha256": "cd7a99fd6be0740516be8811edfb7b2b6026ba4931af530e5124c086de26f4ab"
+    }
+  },
+  "docs_dir": "01-fixtures/docs/train",
+  "doc_ids": [
+    "doc-01",
+    "doc-02"
+  ],
+  "reps": 1,
+  "sleep_between_seconds": 2.0,
+  "allow_holdout": false,
+  "holdout_no_retry": false,
+  "started_at": "2026-08-11T03:09:51.411Z",
+  "finished_at": "2026-08-11T03:10:09.764Z",
+  "wall_clock_seconds": 18.352888,
+  "resume_count": 0,
+  "invocations": [
+    {
+      "number": 1,
+      "started_at": "2026-08-11T03:09:51.411Z",
+      "finished_at": "2026-08-11T03:10:09.764Z",
+      "wall_clock_seconds": 18.352888,
+      "skipped_existing": 0
+    }
+  ],
+  "runs": [
+    {
+      "doc_id": "doc-01",
+      "rep": 1,
+      "status": "completed",
+      "started_at": "2026-08-11T03:09:51.431Z",
+      "finished_at": "2026-08-11T03:09:57.970Z",
+      "wall_clock_seconds": 6.53885,
+      "attempts": 1,
+      "retry_log": [
+        {
+          "attempt": 1,
+          "started_at": "2026-08-11T03:09:51.431Z",
+          "finished_at": "2026-08-11T03:09:57.933Z",
+          "wall_clock_seconds": 6.501771,
+          "status": "success",
+          "returncode": 0,
+          "reason": null,
+          "will_retry": false,
+          "stderr": "",
+          "launch_error": null
+        }
+      ],
+      "resume_skips": 0,
+      "files": {
+        "result_json": "raw/doc-01-rep1.result.json",
+        "raw_text": "raw/doc-01-rep1.raw.txt",
+        "prediction": "preds/rep1/doc-01.json"
+      },
+      "model_output_valid_json": true
+    },
+    {
+      "doc_id": "doc-02",
+      "rep": 1,
+      "status": "completed",
+      "started_at": "2026-08-11T03:09:57.989Z",
+      "finished_at": "2026-08-11T03:10:09.755Z",
+      "wall_clock_seconds": 11.765803,
+      "attempts": 1,
+      "retry_log": [
+        {
+          "attempt": 1,
+          "started_at": "2026-08-11T03:09:59.933Z",
+          "finished_at": "2026-08-11T03:10:09.718Z",
+          "wall_clock_seconds": 9.785212,
+          "status": "success",
+          "returncode": 0,
+          "reason": null,
+          "will_retry": false,
+          "stderr": "",
+          "launch_error": null
+        }
+      ],
+      "resume_skips": 0,
+      "files": {
+        "result_json": "raw/doc-02-rep1.result.json",
+        "raw_text": "raw/doc-02-rep1.raw.txt",
+        "prediction": "preds/rep1/doc-02.json"
+      },
+      "model_output_valid_json": true
+    }
+  ],
+  "summary": {
+    "total": 2,
+    "completed": 2,
+    "model_failures": 0,
+    "transport_failures": 0,
+    "skipped_existing": 0
+  }
+}

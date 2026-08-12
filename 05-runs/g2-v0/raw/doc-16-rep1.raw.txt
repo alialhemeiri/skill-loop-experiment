@@ -1,0 +1,14 @@
+{
+  "landlord_name": "Hessa Adel Al Darmaki",
+  "tenant_name": "Latifa Hamdan Al Rashedi",
+  "unit_number": "A-2409",
+  "community": "Mina Juniper Bay",
+  "contract_start_date": "2027-06-06",
+  "contract_end_date": null,
+  "annual_rent_aed": 132000,
+  "security_deposit_aed": null,
+  "number_of_payments": 1,
+  "notice_period_days": null,
+  "early_termination_penalty_months": null,
+  "furnished_status": "unfurnished"
+}

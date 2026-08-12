@@ -1,0 +1,1 @@
+{"landlord_name": "Jonas Lindholm", "tenant_name": "Daniel Okafor", "unit_number": "A-2510", "community": "Zayed Saffron Square", "contract_start_date": "2027-02-24", "contract_end_date": null, "annual_rent_aed": 186000, "security_deposit_aed": null, "number_of_payments": 1, "notice_period_days": 90, "early_termination_penalty_months": null, "furnished_status": null}

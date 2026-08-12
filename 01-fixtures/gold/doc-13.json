@@ -1,0 +1,14 @@
+{
+  "landlord_name": "Sofia Petrescu",
+  "tenant_name": "Tariq Juma Al Mansoori",
+  "unit_number": "E-1610",
+  "community": "Saadiyat Acacia Reach",
+  "contract_start_date": "2027-04-01",
+  "contract_end_date": "2028-03-31",
+  "annual_rent_aed": 72000,
+  "security_deposit_aed": null,
+  "number_of_payments": 2,
+  "notice_period_days": 30,
+  "early_termination_penalty_months": 1,
+  "furnished_status": null
+}

@@ -1,0 +1,1 @@
+{"landlord_name":"Noura Khalfan Al Mehairi","tenant_name":"Arjun Menon","unit_number":"E-2507","community":"Reem Copper Gardens","contract_start_date":"2027-01-04","contract_end_date":"2028-01-03","annual_rent_aed":126000,"security_deposit_aed":6300,"number_of_payments":2,"notice_period_days":null,"early_termination_penalty_months":null,"furnished_status":"unfurnished"}

@@ -1,0 +1,14 @@
+{
+  "landlord_name": "Dario Kovac",
+  "tenant_name": "Salma Benyahia",
+  "unit_number": "F-1601",
+  "community": "Mushrif Iris Quarter",
+  "contract_start_date": "2026-09-14",
+  "contract_end_date": "2027-09-13",
+  "annual_rent_aed": 168000,
+  "security_deposit_aed": 8400,
+  "number_of_payments": 4,
+  "notice_period_days": 90,
+  "early_termination_penalty_months": null,
+  "furnished_status": null
+}

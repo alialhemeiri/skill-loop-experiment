@@ -1,0 +1,36 @@
+{
+  "status": "candidate pin (P2); hash-frozen at G1 per SPEC §8",
+  "pinned_date": "2026-08-11",
+  "cli": "claude",
+  "cli_version": "2.1.227 (Claude Code)",
+  "model": "claude-sonnet-5",
+  "canonical_model_reported": "claude-sonnet-5",
+  "provider_reported": "firstParty",
+  "system_prompt_file": "00-control/worker-system-prompt.txt",
+  "invocation": {
+    "prompt_via": "stdin",
+    "args_template": [
+      "-p",
+      "--model", "claude-sonnet-5",
+      "--system-prompt", "<contents of system_prompt_file>",
+      "--exclude-dynamic-system-prompt-sections",
+      "--no-session-persistence",
+      "--disallowedTools", "Bash Read Write Edit Glob Grep WebFetch WebSearch NotebookEdit Task TodoWrite",
+      "--output-format", "json"
+    ],
+    "cwd": "/tmp/autoresearch-worker-cwd — empty neutral directory created by the runner; keeps workspace CLAUDE.md, settings, hooks and skills out of the worker's scope",
+    "note": "--system-prompt receives the FILE CONTENTS (runner reads the file); the file exists so FREEZE.md can hash it"
+  },
+  "isolation_evidence_2026-08-11_final": {
+    "probe": "post --disallowedTools + no-fence system-prompt line: extraction probe returned bare JSON, num_turns=1, is_error=false, fixed context ~18.9k tokens (tool schemas pruned from ~24.3k)",
+    "note": "supersedes the pre-change evidence below for the frozen invocation"
+  },
+  "isolation_evidence_2026-08-11": {
+    "token_drop": "bare `claude -p` system overhead ~37.2k tokens -> ~24.3k with isolation flags; removed part = dynamic sections (CLAUDE.md, env, memory); residual = fixed Claude Code tool-schema scaffolding, constant across runs at pinned CLI version",
+    "content_probe": "worker asked whether its context mentions Ali / APERION / CLAUDE.md / memory dir / profile data -> answered 'No'",
+    "behavior_probe": "extraction-shaped prompt -> num_turns=1, bare JSON result, ~2s API time"
+  },
+  "headroom_note": "Subscription auth (Claude Max 20x), no per-token billing. Probe calls ~2s each; full experiment ≈ 630 worker runs; large batches run overnight per SPEC §6 to avoid colliding with Ali's usage.",
+  "invocation_change_2026-08-11": "Post-calibration, pre-freeze (SPEC A2.5): system prompt gained the no-fence line (A1.2, during G1R) and --disallowedTools added after a live probe (accepted; single turn; fixed context ~24.3k -> ~18.9k tokens as tool schemas pruned). Calibration batches g1-cal-1..4 predate the disallow flag; g1-cal-5 and the noise floor run with the final invocation — the noise floor is the binding v0 measurement.",
+  "transport_retry_rule": "Retry (max 2, logged in the batch manifest) ONLY on transport failure: nonzero CLI exit, empty stdout, or stdout not parseable as claude CLI result JSON. A successful CLI result whose .result text is not valid JSON is a MODEL failure: never retried, scored 0 per SPEC §5."
+}

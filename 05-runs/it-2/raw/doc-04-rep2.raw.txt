@@ -1,0 +1,1 @@
+{"landlord_name": "YOUSEF MAJID AL KETBI", "tenant_name": "Aya Morimoto", "unit_number": "F-2912", "community": "Al Rimal Orchard", "contract_start_date": "2026-10-17", "contract_end_date": "2027-10-16", "annual_rent_aed": 144000, "security_deposit_aed": 7200, "number_of_payments": 12, "notice_period_days": null, "early_termination_penalty_months": 1.5, "furnished_status": null}

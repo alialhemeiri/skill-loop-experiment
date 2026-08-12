@@ -1,0 +1,1322 @@
+{
+  "batch_id": "nf-1",
+  "documents": 10,
+  "reps": 2,
+  "runs": 20,
+  "pooled_mean_field_accuracy": 0.9,
+  "correct_fields": 216,
+  "total_fields": 240,
+  "per_rep": {
+    "1": {
+      "mean_field_accuracy": 0.9,
+      "correct_fields": 108,
+      "total_fields": 120,
+      "unparseable": 0,
+      "wrong_shape": 0,
+      "missing": 0,
+      "hallucinated_absent": 0,
+      "missed_present": 11
+    },
+    "2": {
+      "mean_field_accuracy": 0.9,
+      "correct_fields": 108,
+      "total_fields": 120,
+      "unparseable": 0,
+      "wrong_shape": 0,
+      "missing": 0,
+      "hallucinated_absent": 0,
+      "missed_present": 12
+    }
+  },
+  "per_field": {
+    "landlord_name": {
+      "correct": 20,
+      "total": 20,
+      "accuracy": 1.0
+    },
+    "tenant_name": {
+      "correct": 20,
+      "total": 20,
+      "accuracy": 1.0
+    },
+    "unit_number": {
+      "correct": 20,
+      "total": 20,
+      "accuracy": 1.0
+    },
+    "community": {
+      "correct": 20,
+      "total": 20,
+      "accuracy": 1.0
+    },
+    "contract_start_date": {
+      "correct": 20,
+      "total": 20,
+      "accuracy": 1.0
+    },
+    "contract_end_date": {
+      "correct": 4,
+      "total": 20,
+      "accuracy": 0.2
+    },
+    "annual_rent_aed": {
+      "correct": 20,
+      "total": 20,
+      "accuracy": 1.0
+    },
+    "security_deposit_aed": {
+      "correct": 12,
+      "total": 20,
+      "accuracy": 0.6
+    },
+    "number_of_payments": {
+      "correct": 20,
+      "total": 20,
+      "accuracy": 1.0
+    },
+    "notice_period_days": {
+      "correct": 20,
+      "total": 20,
+      "accuracy": 1.0
+    },
+    "early_termination_penalty_months": {
+      "correct": 20,
+      "total": 20,
+      "accuracy": 1.0
+    },
+    "furnished_status": {
+      "correct": 20,
+      "total": 20,
+      "accuracy": 1.0
+    }
+  },
+  "per_document": {
+    "doc-01": {
+      "mean_field_accuracy": 0.9166666666666666,
+      "correct_fields": 22,
+      "total_fields": 24,
+      "per_field": {
+        "landlord_name": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        },
+        "tenant_name": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        },
+        "unit_number": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        },
+        "community": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        },
+        "contract_start_date": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        },
+        "contract_end_date": {
+          "correct": 0,
+          "total": 2,
+          "accuracy": 0.0
+        },
+        "annual_rent_aed": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        },
+        "security_deposit_aed": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        },
+        "number_of_payments": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        },
+        "notice_period_days": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        },
+        "early_termination_penalty_months": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        },
+        "furnished_status": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        }
+      },
+      "per_rep": {
+        "1": {
+          "score": 0.9166666666666666,
+          "correct_fields": 11,
+          "total_fields": 12,
+          "field_results": {
+            "landlord_name": true,
+            "tenant_name": true,
+            "unit_number": true,
+            "community": true,
+            "contract_start_date": true,
+            "contract_end_date": false,
+            "annual_rent_aed": true,
+            "security_deposit_aed": true,
+            "number_of_payments": true,
+            "notice_period_days": true,
+            "early_termination_penalty_months": true,
+            "furnished_status": true
+          },
+          "unparseable": false,
+          "wrong_shape": false,
+          "missing": false,
+          "hallucinated_absent": 0,
+          "missed_present": 0
+        },
+        "2": {
+          "score": 0.9166666666666666,
+          "correct_fields": 11,
+          "total_fields": 12,
+          "field_results": {
+            "landlord_name": true,
+            "tenant_name": true,
+            "unit_number": true,
+            "community": true,
+            "contract_start_date": true,
+            "contract_end_date": false,
+            "annual_rent_aed": true,
+            "security_deposit_aed": true,
+            "number_of_payments": true,
+            "notice_period_days": true,
+            "early_termination_penalty_months": true,
+            "furnished_status": true
+          },
+          "unparseable": false,
+          "wrong_shape": false,
+          "missing": false,
+          "hallucinated_absent": 0,
+          "missed_present": 1
+        }
+      },
+      "unparseable": 0,
+      "wrong_shape": 0,
+      "missing": 0,
+      "hallucinated_absent": 0,
+      "missed_present": 1
+    },
+    "doc-02": {
+      "mean_field_accuracy": 0.8333333333333334,
+      "correct_fields": 20,
+      "total_fields": 24,
+      "per_field": {
+        "landlord_name": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        },
+        "tenant_name": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        },
+        "unit_number": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        },
+        "community": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        },
+        "contract_start_date": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        },
+        "contract_end_date": {
+          "correct": 0,
+          "total": 2,
+          "accuracy": 0.0
+        },
+        "annual_rent_aed": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        },
+        "security_deposit_aed": {
+          "correct": 0,
+          "total": 2,
+          "accuracy": 0.0
+        },
+        "number_of_payments": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        },
+        "notice_period_days": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        },
+        "early_termination_penalty_months": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        },
+        "furnished_status": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        }
+      },
+      "per_rep": {
+        "1": {
+          "score": 0.8333333333333334,
+          "correct_fields": 10,
+          "total_fields": 12,
+          "field_results": {
+            "landlord_name": true,
+            "tenant_name": true,
+            "unit_number": true,
+            "community": true,
+            "contract_start_date": true,
+            "contract_end_date": false,
+            "annual_rent_aed": true,
+            "security_deposit_aed": false,
+            "number_of_payments": true,
+            "notice_period_days": true,
+            "early_termination_penalty_months": true,
+            "furnished_status": true
+          },
+          "unparseable": false,
+          "wrong_shape": false,
+          "missing": false,
+          "hallucinated_absent": 0,
+          "missed_present": 2
+        },
+        "2": {
+          "score": 0.8333333333333334,
+          "correct_fields": 10,
+          "total_fields": 12,
+          "field_results": {
+            "landlord_name": true,
+            "tenant_name": true,
+            "unit_number": true,
+            "community": true,
+            "contract_start_date": true,
+            "contract_end_date": false,
+            "annual_rent_aed": true,
+            "security_deposit_aed": false,
+            "number_of_payments": true,
+            "notice_period_days": true,
+            "early_termination_penalty_months": true,
+            "furnished_status": true
+          },
+          "unparseable": false,
+          "wrong_shape": false,
+          "missing": false,
+          "hallucinated_absent": 0,
+          "missed_present": 2
+        }
+      },
+      "unparseable": 0,
+      "wrong_shape": 0,
+      "missing": 0,
+      "hallucinated_absent": 0,
+      "missed_present": 4
+    },
+    "doc-03": {
+      "mean_field_accuracy": 0.9166666666666666,
+      "correct_fields": 22,
+      "total_fields": 24,
+      "per_field": {
+        "landlord_name": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        },
+        "tenant_name": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        },
+        "unit_number": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        },
+        "community": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        },
+        "contract_start_date": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        },
+        "contract_end_date": {
+          "correct": 1,
+          "total": 2,
+          "accuracy": 0.5
+        },
+        "annual_rent_aed": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        },
+        "security_deposit_aed": {
+          "correct": 1,
+          "total": 2,
+          "accuracy": 0.5
+        },
+        "number_of_payments": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        },
+        "notice_period_days": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        },
+        "early_termination_penalty_months": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        },
+        "furnished_status": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        }
+      },
+      "per_rep": {
+        "1": {
+          "score": 1.0,
+          "correct_fields": 12,
+          "total_fields": 12,
+          "field_results": {
+            "landlord_name": true,
+            "tenant_name": true,
+            "unit_number": true,
+            "community": true,
+            "contract_start_date": true,
+            "contract_end_date": true,
+            "annual_rent_aed": true,
+            "security_deposit_aed": true,
+            "number_of_payments": true,
+            "notice_period_days": true,
+            "early_termination_penalty_months": true,
+            "furnished_status": true
+          },
+          "unparseable": false,
+          "wrong_shape": false,
+          "missing": false,
+          "hallucinated_absent": 0,
+          "missed_present": 0
+        },
+        "2": {
+          "score": 0.8333333333333334,
+          "correct_fields": 10,
+          "total_fields": 12,
+          "field_results": {
+            "landlord_name": true,
+            "tenant_name": true,
+            "unit_number": true,
+            "community": true,
+            "contract_start_date": true,
+            "contract_end_date": false,
+            "annual_rent_aed": true,
+            "security_deposit_aed": false,
+            "number_of_payments": true,
+            "notice_period_days": true,
+            "early_termination_penalty_months": true,
+            "furnished_status": true
+          },
+          "unparseable": false,
+          "wrong_shape": false,
+          "missing": false,
+          "hallucinated_absent": 0,
+          "missed_present": 2
+        }
+      },
+      "unparseable": 0,
+      "wrong_shape": 0,
+      "missing": 0,
+      "hallucinated_absent": 0,
+      "missed_present": 2
+    },
+    "doc-04": {
+      "mean_field_accuracy": 0.8333333333333334,
+      "correct_fields": 20,
+      "total_fields": 24,
+      "per_field": {
+        "landlord_name": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        },
+        "tenant_name": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        },
+        "unit_number": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        },
+        "community": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        },
+        "contract_start_date": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        },
+        "contract_end_date": {
+          "correct": 0,
+          "total": 2,
+          "accuracy": 0.0
+        },
+        "annual_rent_aed": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        },
+        "security_deposit_aed": {
+          "correct": 0,
+          "total": 2,
+          "accuracy": 0.0
+        },
+        "number_of_payments": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        },
+        "notice_period_days": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        },
+        "early_termination_penalty_months": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        },
+        "furnished_status": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        }
+      },
+      "per_rep": {
+        "1": {
+          "score": 0.8333333333333334,
+          "correct_fields": 10,
+          "total_fields": 12,
+          "field_results": {
+            "landlord_name": true,
+            "tenant_name": true,
+            "unit_number": true,
+            "community": true,
+            "contract_start_date": true,
+            "contract_end_date": false,
+            "annual_rent_aed": true,
+            "security_deposit_aed": false,
+            "number_of_payments": true,
+            "notice_period_days": true,
+            "early_termination_penalty_months": true,
+            "furnished_status": true
+          },
+          "unparseable": false,
+          "wrong_shape": false,
+          "missing": false,
+          "hallucinated_absent": 0,
+          "missed_present": 2
+        },
+        "2": {
+          "score": 0.8333333333333334,
+          "correct_fields": 10,
+          "total_fields": 12,
+          "field_results": {
+            "landlord_name": true,
+            "tenant_name": true,
+            "unit_number": true,
+            "community": true,
+            "contract_start_date": true,
+            "contract_end_date": false,
+            "annual_rent_aed": true,
+            "security_deposit_aed": false,
+            "number_of_payments": true,
+            "notice_period_days": true,
+            "early_termination_penalty_months": true,
+            "furnished_status": true
+          },
+          "unparseable": false,
+          "wrong_shape": false,
+          "missing": false,
+          "hallucinated_absent": 0,
+          "missed_present": 2
+        }
+      },
+      "unparseable": 0,
+      "wrong_shape": 0,
+      "missing": 0,
+      "hallucinated_absent": 0,
+      "missed_present": 4
+    },
+    "doc-05": {
+      "mean_field_accuracy": 0.9166666666666666,
+      "correct_fields": 22,
+      "total_fields": 24,
+      "per_field": {
+        "landlord_name": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        },
+        "tenant_name": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        },
+        "unit_number": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        },
+        "community": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        },
+        "contract_start_date": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        },
+        "contract_end_date": {
+          "correct": 0,
+          "total": 2,
+          "accuracy": 0.0
+        },
+        "annual_rent_aed": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        },
+        "security_deposit_aed": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        },
+        "number_of_payments": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        },
+        "notice_period_days": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        },
+        "early_termination_penalty_months": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        },
+        "furnished_status": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        }
+      },
+      "per_rep": {
+        "1": {
+          "score": 0.9166666666666666,
+          "correct_fields": 11,
+          "total_fields": 12,
+          "field_results": {
+            "landlord_name": true,
+            "tenant_name": true,
+            "unit_number": true,
+            "community": true,
+            "contract_start_date": true,
+            "contract_end_date": false,
+            "annual_rent_aed": true,
+            "security_deposit_aed": true,
+            "number_of_payments": true,
+            "notice_period_days": true,
+            "early_termination_penalty_months": true,
+            "furnished_status": true
+          },
+          "unparseable": false,
+          "wrong_shape": false,
+          "missing": false,
+          "hallucinated_absent": 0,
+          "missed_present": 1
+        },
+        "2": {
+          "score": 0.9166666666666666,
+          "correct_fields": 11,
+          "total_fields": 12,
+          "field_results": {
+            "landlord_name": true,
+            "tenant_name": true,
+            "unit_number": true,
+            "community": true,
+            "contract_start_date": true,
+            "contract_end_date": false,
+            "annual_rent_aed": true,
+            "security_deposit_aed": true,
+            "number_of_payments": true,
+            "notice_period_days": true,
+            "early_termination_penalty_months": true,
+            "furnished_status": true
+          },
+          "unparseable": false,
+          "wrong_shape": false,
+          "missing": false,
+          "hallucinated_absent": 0,
+          "missed_present": 1
+        }
+      },
+      "unparseable": 0,
+      "wrong_shape": 0,
+      "missing": 0,
+      "hallucinated_absent": 0,
+      "missed_present": 2
+    },
+    "doc-06": {
+      "mean_field_accuracy": 0.9166666666666666,
+      "correct_fields": 22,
+      "total_fields": 24,
+      "per_field": {
+        "landlord_name": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        },
+        "tenant_name": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        },
+        "unit_number": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        },
+        "community": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        },
+        "contract_start_date": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        },
+        "contract_end_date": {
+          "correct": 1,
+          "total": 2,
+          "accuracy": 0.5
+        },
+        "annual_rent_aed": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        },
+        "security_deposit_aed": {
+          "correct": 1,
+          "total": 2,
+          "accuracy": 0.5
+        },
+        "number_of_payments": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        },
+        "notice_period_days": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        },
+        "early_termination_penalty_months": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        },
+        "furnished_status": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        }
+      },
+      "per_rep": {
+        "1": {
+          "score": 0.8333333333333334,
+          "correct_fields": 10,
+          "total_fields": 12,
+          "field_results": {
+            "landlord_name": true,
+            "tenant_name": true,
+            "unit_number": true,
+            "community": true,
+            "contract_start_date": true,
+            "contract_end_date": false,
+            "annual_rent_aed": true,
+            "security_deposit_aed": false,
+            "number_of_payments": true,
+            "notice_period_days": true,
+            "early_termination_penalty_months": true,
+            "furnished_status": true
+          },
+          "unparseable": false,
+          "wrong_shape": false,
+          "missing": false,
+          "hallucinated_absent": 0,
+          "missed_present": 2
+        },
+        "2": {
+          "score": 1.0,
+          "correct_fields": 12,
+          "total_fields": 12,
+          "field_results": {
+            "landlord_name": true,
+            "tenant_name": true,
+            "unit_number": true,
+            "community": true,
+            "contract_start_date": true,
+            "contract_end_date": true,
+            "annual_rent_aed": true,
+            "security_deposit_aed": true,
+            "number_of_payments": true,
+            "notice_period_days": true,
+            "early_termination_penalty_months": true,
+            "furnished_status": true
+          },
+          "unparseable": false,
+          "wrong_shape": false,
+          "missing": false,
+          "hallucinated_absent": 0,
+          "missed_present": 0
+        }
+      },
+      "unparseable": 0,
+      "wrong_shape": 0,
+      "missing": 0,
+      "hallucinated_absent": 0,
+      "missed_present": 2
+    },
+    "doc-07": {
+      "mean_field_accuracy": 0.9166666666666666,
+      "correct_fields": 22,
+      "total_fields": 24,
+      "per_field": {
+        "landlord_name": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        },
+        "tenant_name": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        },
+        "unit_number": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        },
+        "community": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        },
+        "contract_start_date": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        },
+        "contract_end_date": {
+          "correct": 0,
+          "total": 2,
+          "accuracy": 0.0
+        },
+        "annual_rent_aed": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        },
+        "security_deposit_aed": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        },
+        "number_of_payments": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        },
+        "notice_period_days": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        },
+        "early_termination_penalty_months": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        },
+        "furnished_status": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        }
+      },
+      "per_rep": {
+        "1": {
+          "score": 0.9166666666666666,
+          "correct_fields": 11,
+          "total_fields": 12,
+          "field_results": {
+            "landlord_name": true,
+            "tenant_name": true,
+            "unit_number": true,
+            "community": true,
+            "contract_start_date": true,
+            "contract_end_date": false,
+            "annual_rent_aed": true,
+            "security_deposit_aed": true,
+            "number_of_payments": true,
+            "notice_period_days": true,
+            "early_termination_penalty_months": true,
+            "furnished_status": true
+          },
+          "unparseable": false,
+          "wrong_shape": false,
+          "missing": false,
+          "hallucinated_absent": 0,
+          "missed_present": 1
+        },
+        "2": {
+          "score": 0.9166666666666666,
+          "correct_fields": 11,
+          "total_fields": 12,
+          "field_results": {
+            "landlord_name": true,
+            "tenant_name": true,
+            "unit_number": true,
+            "community": true,
+            "contract_start_date": true,
+            "contract_end_date": false,
+            "annual_rent_aed": true,
+            "security_deposit_aed": true,
+            "number_of_payments": true,
+            "notice_period_days": true,
+            "early_termination_penalty_months": true,
+            "furnished_status": true
+          },
+          "unparseable": false,
+          "wrong_shape": false,
+          "missing": false,
+          "hallucinated_absent": 0,
+          "missed_present": 1
+        }
+      },
+      "unparseable": 0,
+      "wrong_shape": 0,
+      "missing": 0,
+      "hallucinated_absent": 0,
+      "missed_present": 2
+    },
+    "doc-08": {
+      "mean_field_accuracy": 0.8333333333333334,
+      "correct_fields": 20,
+      "total_fields": 24,
+      "per_field": {
+        "landlord_name": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        },
+        "tenant_name": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        },
+        "unit_number": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        },
+        "community": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        },
+        "contract_start_date": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        },
+        "contract_end_date": {
+          "correct": 0,
+          "total": 2,
+          "accuracy": 0.0
+        },
+        "annual_rent_aed": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        },
+        "security_deposit_aed": {
+          "correct": 0,
+          "total": 2,
+          "accuracy": 0.0
+        },
+        "number_of_payments": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        },
+        "notice_period_days": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        },
+        "early_termination_penalty_months": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        },
+        "furnished_status": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        }
+      },
+      "per_rep": {
+        "1": {
+          "score": 0.8333333333333334,
+          "correct_fields": 10,
+          "total_fields": 12,
+          "field_results": {
+            "landlord_name": true,
+            "tenant_name": true,
+            "unit_number": true,
+            "community": true,
+            "contract_start_date": true,
+            "contract_end_date": false,
+            "annual_rent_aed": true,
+            "security_deposit_aed": false,
+            "number_of_payments": true,
+            "notice_period_days": true,
+            "early_termination_penalty_months": true,
+            "furnished_status": true
+          },
+          "unparseable": false,
+          "wrong_shape": false,
+          "missing": false,
+          "hallucinated_absent": 0,
+          "missed_present": 2
+        },
+        "2": {
+          "score": 0.8333333333333334,
+          "correct_fields": 10,
+          "total_fields": 12,
+          "field_results": {
+            "landlord_name": true,
+            "tenant_name": true,
+            "unit_number": true,
+            "community": true,
+            "contract_start_date": true,
+            "contract_end_date": false,
+            "annual_rent_aed": true,
+            "security_deposit_aed": false,
+            "number_of_payments": true,
+            "notice_period_days": true,
+            "early_termination_penalty_months": true,
+            "furnished_status": true
+          },
+          "unparseable": false,
+          "wrong_shape": false,
+          "missing": false,
+          "hallucinated_absent": 0,
+          "missed_present": 2
+        }
+      },
+      "unparseable": 0,
+      "wrong_shape": 0,
+      "missing": 0,
+      "hallucinated_absent": 0,
+      "missed_present": 4
+    },
+    "doc-09": {
+      "mean_field_accuracy": 0.9583333333333334,
+      "correct_fields": 23,
+      "total_fields": 24,
+      "per_field": {
+        "landlord_name": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        },
+        "tenant_name": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        },
+        "unit_number": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        },
+        "community": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        },
+        "contract_start_date": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        },
+        "contract_end_date": {
+          "correct": 1,
+          "total": 2,
+          "accuracy": 0.5
+        },
+        "annual_rent_aed": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        },
+        "security_deposit_aed": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        },
+        "number_of_payments": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        },
+        "notice_period_days": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        },
+        "early_termination_penalty_months": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        },
+        "furnished_status": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        }
+      },
+      "per_rep": {
+        "1": {
+          "score": 0.9166666666666666,
+          "correct_fields": 11,
+          "total_fields": 12,
+          "field_results": {
+            "landlord_name": true,
+            "tenant_name": true,
+            "unit_number": true,
+            "community": true,
+            "contract_start_date": true,
+            "contract_end_date": false,
+            "annual_rent_aed": true,
+            "security_deposit_aed": true,
+            "number_of_payments": true,
+            "notice_period_days": true,
+            "early_termination_penalty_months": true,
+            "furnished_status": true
+          },
+          "unparseable": false,
+          "wrong_shape": false,
+          "missing": false,
+          "hallucinated_absent": 0,
+          "missed_present": 1
+        },
+        "2": {
+          "score": 1.0,
+          "correct_fields": 12,
+          "total_fields": 12,
+          "field_results": {
+            "landlord_name": true,
+            "tenant_name": true,
+            "unit_number": true,
+            "community": true,
+            "contract_start_date": true,
+            "contract_end_date": true,
+            "annual_rent_aed": true,
+            "security_deposit_aed": true,
+            "number_of_payments": true,
+            "notice_period_days": true,
+            "early_termination_penalty_months": true,
+            "furnished_status": true
+          },
+          "unparseable": false,
+          "wrong_shape": false,
+          "missing": false,
+          "hallucinated_absent": 0,
+          "missed_present": 0
+        }
+      },
+      "unparseable": 0,
+      "wrong_shape": 0,
+      "missing": 0,
+      "hallucinated_absent": 0,
+      "missed_present": 1
+    },
+    "doc-10": {
+      "mean_field_accuracy": 0.9583333333333334,
+      "correct_fields": 23,
+      "total_fields": 24,
+      "per_field": {
+        "landlord_name": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        },
+        "tenant_name": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        },
+        "unit_number": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        },
+        "community": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        },
+        "contract_start_date": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        },
+        "contract_end_date": {
+          "correct": 1,
+          "total": 2,
+          "accuracy": 0.5
+        },
+        "annual_rent_aed": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        },
+        "security_deposit_aed": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        },
+        "number_of_payments": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        },
+        "notice_period_days": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        },
+        "early_termination_penalty_months": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        },
+        "furnished_status": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        }
+      },
+      "per_rep": {
+        "1": {
+          "score": 1.0,
+          "correct_fields": 12,
+          "total_fields": 12,
+          "field_results": {
+            "landlord_name": true,
+            "tenant_name": true,
+            "unit_number": true,
+            "community": true,
+            "contract_start_date": true,
+            "contract_end_date": true,
+            "annual_rent_aed": true,
+            "security_deposit_aed": true,
+            "number_of_payments": true,
+            "notice_period_days": true,
+            "early_termination_penalty_months": true,
+            "furnished_status": true
+          },
+          "unparseable": false,
+          "wrong_shape": false,
+          "missing": false,
+          "hallucinated_absent": 0,
+          "missed_present": 0
+        },
+        "2": {
+          "score": 0.9166666666666666,
+          "correct_fields": 11,
+          "total_fields": 12,
+          "field_results": {
+            "landlord_name": true,
+            "tenant_name": true,
+            "unit_number": true,
+            "community": true,
+            "contract_start_date": true,
+            "contract_end_date": false,
+            "annual_rent_aed": true,
+            "security_deposit_aed": true,
+            "number_of_payments": true,
+            "notice_period_days": true,
+            "early_termination_penalty_months": true,
+            "furnished_status": true
+          },
+          "unparseable": false,
+          "wrong_shape": false,
+          "missing": false,
+          "hallucinated_absent": 0,
+          "missed_present": 1
+        }
+      },
+      "unparseable": 0,
+      "wrong_shape": 0,
+      "missing": 0,
+      "hallucinated_absent": 0,
+      "missed_present": 1
+    }
+  },
+  "unparseable": 0,
+  "wrong_shape": 0,
+  "missing": 0,
+  "hallucinated_absent": 0,
+  "missed_present": 23,
+  "fence_stripped": 1,
+  "turn_check_retries": 0
+}

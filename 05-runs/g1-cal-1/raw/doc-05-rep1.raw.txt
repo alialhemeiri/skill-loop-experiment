@@ -1,0 +1,14 @@
+{
+  "landlord_name": "Ifeoma Eze",
+  "tenant_name": "Mateo Villanueva",
+  "unit_number": "D-2606",
+  "community": "Barsha Amber Grove",
+  "contract_start_date": "2026-11-04",
+  "contract_end_date": null,
+  "annual_rent_aed": 96000,
+  "security_deposit_aed": null,
+  "number_of_payments": 6,
+  "notice_period_days": 45,
+  "early_termination_penalty_months": null,
+  "furnished_status": "furnished"
+}

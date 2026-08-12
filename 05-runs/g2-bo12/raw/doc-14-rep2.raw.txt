@@ -1,0 +1,1 @@
+{"landlord_name": "Farah Siddiqui", "tenant_name": "Priya Nandakumar", "unit_number": "D-0409", "community": "Khalidiya Palm Court", "contract_start_date": "2027-04-20", "contract_end_date": null, "annual_rent_aed": 162000, "security_deposit_aed": null, "number_of_payments": 12, "notice_period_days": 30, "early_termination_penalty_months": null, "furnished_status": "unfurnished"}
